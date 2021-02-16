@@ -89,7 +89,7 @@ class $Promise {
     })
   }
 
-  static race = values => {
+  static race (values) {
     return new $Promise((resolve, reject) => {
       let len = values.length
       if (!len) return
@@ -106,7 +106,7 @@ class $Promise {
     })
   }
 
-  static all = values => {
+  static all (values) {
     return new $Promise((resolve, reject) => {
       let len = values.length
       if (!len) return
@@ -148,4 +148,4 @@ const p2 = new $Promise((resolve, reject) => {
 $Promise.all([p1, p2]).then(r => {
   console.log(r)
 })
- */
+*/
